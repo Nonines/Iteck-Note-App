@@ -2,12 +2,13 @@
 module.exports = {
   content: {
     relative: true,
-    files: ["./src/**/*.{html,js}"],
+    files: ["./assets/**/*.{html,js}"],
   },
   theme: {
     extend: {
       backgroundImage: {
-        "header-texture": "url('/src/images/top_bg.png')",
+        "header-texture": "url('/assets/images/top_bg.png')",
+        "hamburger-svg": "url('/assets/svg/hamburger.svg')",
       },
       fontSize: {
         xxs: "0.5rem",

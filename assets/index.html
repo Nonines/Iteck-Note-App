@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/output.css" />
-    <script src="/assets/script.js"></script>
+    <script src="/assets/script.js" defer></script>
     <title>Iteck</title>
   </head>
   <body>
@@ -14,7 +14,9 @@
     >
       <div class="flex flex-wrap justify-center gap-3">
         <div class="flex items-center">
-          <button class="w-12 rounded bg-white text-black">Special</button>
+          <button class="w-12 rounded bg-white py-[2px] text-black">
+            Special
+          </button>
         </div>
 
         <div class="flex items-center gap-1">
@@ -37,7 +39,9 @@
     </div>
 
     <!-- navbar -->
-    <nav class="relative z-10 -mt-9 h-20 rounded-t-[20px] bg-gray-100 py-5">
+    <nav
+      class="sticky top-0 z-10 -mt-9 flex max-h-max min-h-[80px] flex-col gap-8 rounded-t-[20px] bg-gray-100 py-5"
+    >
       <div class="flex justify-between px-4">
         <a class="w-40" href="#">
           <img
@@ -48,10 +52,55 @@
         </a>
 
         <button
-          class="flex h-10 w-14 items-center justify-center rounded-sm border border-slate-300"
+          id="nav-toggler"
+          class="flex h-10 w-14 items-center justify-center rounded-sm border border-slate-300 bg-transparent focus:shadow-[0_0px_0px_0.25rem_rgba(0,0,0,0.55)]"
         >
           <span class="h-8 w-8 bg-hamburger-svg"></span>
         </button>
+      </div>
+
+      <div id="nav-items" class="hidden w-full px-4 text-xs">
+        <ul class="flex flex-col">
+          <li class="flex flex-col justify-center py-2">
+            <a href="#">HOMES</a>
+            <ul class="flex flex-col">
+              <li><a href="#">LANDING PREVIEW</a></li>
+              <li><a href="#">CREATIVE IT SOLUTIONS</a></li>
+              <li><a href="#">DATA ANALYSIS</a></li>
+              <li><a href="#">APP LANDING</a></li>
+              <li><a href="#">SAAS TECHNOLOGY</a></li>
+              <li><a href="#">MARKETING STARTUP</a></li>
+              <li><a href="#">IT SOLUTIONS</a></li>
+              <li><a href="#">SOFTWARE COMPANY</a></li>
+              <li><a href="#">DIGITAL AGENCY</a></li>
+              <li><a href="#">MODERN SHOP</a></li>
+            </ul>
+          </li>
+
+          <li class="flex flex-col justify-center py-2">
+            <a href="#">PAGES</a>
+            <ul class="flex flex-col">
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">PRODUCT</a></li>
+              <li><a href="#">SERVICES</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">SINGLE PROJECT</a></li>
+              <li><a href="#">SINLE POST</a></li>
+            </ul>
+          </li>
+
+          <li class="flex flex-col justify-center py-2">
+            <a href="#">PORTFOLIO</a>
+          </li>
+
+          <li class="flex flex-col justify-center py-2">
+            <a href="#">BLOG</a>
+          </li>
+
+          <li class="flex flex-col justify-center py-2">
+            <a href="#">CONTACT</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </body>

@@ -3,10 +3,15 @@ const displayController = (() => {
   const navMenu = document.getElementById("nav-items");
 
   navMenuToggler.addEventListener("click", () => {
-    if (navMenu.classList.contains("hidden")) {
-      navMenu.classList.remove("hidden");
+    if (navMenu.style.maxHeight) {
+      navMenu.style.maxHeight = null;
+      // delay then toggle display none
+      setTimeout(() => {
+        navMenu.classList.toggle("hidden");
+      }, 400);
     } else {
-      navMenu.classList.add("hidden");
+      navMenu.classList.toggle("hidden");
+      navMenu.style.maxHeight = navMenu.scrollHeight + "px";
     }
   });
 })();

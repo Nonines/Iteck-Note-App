@@ -13,6 +13,11 @@ module.exports = {
       fontSize: {
         xxs: "0.5rem",
       },
+      transitionProperty: {
+        height: "height",
+        "max-height": "max-height",
+        spacing: "margin, padding",
+      },
     },
   },
   plugins: [],

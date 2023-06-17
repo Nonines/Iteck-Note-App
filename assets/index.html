@@ -40,7 +40,7 @@
 
     <!-- navbar -->
     <nav
-      class="sticky top-0 z-10 -mt-9 flex max-h-max min-h-[80px] flex-col gap-8 rounded-t-[20px] bg-gray-100 py-5"
+      class="sticky top-0 z-10 -mt-9 flex max-h-max min-h-[80px] flex-col rounded-t-[20px] bg-gray-100 py-5"
     >
       <div class="flex justify-between px-4">
         <a class="w-40" href="#">
@@ -59,7 +59,11 @@
         </button>
       </div>
 
-      <div id="nav-items" class="hidden w-full px-4 text-xs">
+      <!-- nav menu -->
+      <div
+        id="nav-items"
+        class="mt-8 hidden max-h-0 w-full overflow-hidden px-4 text-xs transition-max-height delay-0 duration-500 ease-in-out"
+      >
         <ul class="flex flex-col">
           <li class="flex flex-col justify-center py-2">
             <a href="#">HOMES</a>

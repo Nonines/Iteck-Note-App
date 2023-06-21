@@ -7,7 +7,7 @@
     <script src="/assets/script.js" defer></script>
     <title>Iteck</title>
   </head>
-  <body class="overflow-scroll">
+  <body class="overflow-scroll overflow-x-auto">
     <!-- top navbar -->
     <div
       class="max-h-max min-h-[80px] bg-header-texture bg-cover bg-top bg-no-repeat px-4 pb-12 pt-4 text-xxs text-white lg:text-xs xl:px-32"
@@ -40,9 +40,9 @@
 
     <!-- navbar -->
     <nav
-      class="sticky top-0 z-10 -mt-9 flex max-h-max min-h-[80px] flex-col rounded-t-[20px] bg-gray-100 py-5 lg:flex-row lg:bg-white"
+      class="sticky top-0 z-10 -mt-9 flex max-h-max min-h-[80px] flex-col rounded-t-[20px] bg-grayish py-5 lg:flex-row lg:bg-white"
     >
-      <div class="flex justify-between px-4 lg:w-1/4 xl:px-32">
+      <div class="flex justify-between px-4 lg:w-1/4 xl:pl-32">
         <a class="w-40" href="#">
           <img
             class="max-h-full max-w-full"
@@ -188,10 +188,10 @@
     </nav>
 
     <!-- Header -->
-    <header class="flex flex-col px-4 py-14 md:flex-row xl:px-32">
+    <header class="flex flex-col px-4 pt-14 md:flex-row xl:px-32">
       <div class="mb-12">
         <small
-          class="mb-5 block h-7 w-40 rounded-md bg-gray-100 px-2 py-1 text-xs text-purple-800"
+          class="mb-5 flex h-7 w-40 items-center rounded-md bg-grayish px-2 py-1 text-xs text-purple-800"
           >Notero - Easy Notes App</small
         >
 
@@ -263,6 +263,8 @@
         />
       </div>
     </header>
+
+    <!-- Header bottom image -->
     <div>
       <img
         class="min-w-full"
@@ -270,5 +272,54 @@
         alt="wave"
       />
     </div>
+
+    <main class="bg-grayish px-4 xl:px-32">
+      <section class="flex flex-col pb-16">
+        <div class="mb-7 w-full">
+          <h2 class="text-center text-xl font-bold">
+            <span class="text-purple-800">25K+ Installation</span> and Featured
+            on
+          </h2>
+        </div>
+        <div class="grid h-72 grid-cols-2 lg:h-auto lg:grid-cols-6">
+          <a class="flex items-center justify-center" href="#"
+            ><img
+              class="max-h-full max-w-full opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              src="/assets/images/orgs/sn-1.png"
+              alt="Technews"
+          /></a>
+          <a class="flex items-center justify-center" href="#"
+            ><img
+              class="max-h-full max-w-full opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              src="/assets/images/orgs/sn-2.png"
+              alt="Hello world"
+          /></a>
+          <a class="flex items-center justify-center" href="#"
+            ><img
+              class="max-h-full max-w-full opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              src="/assets/images/orgs/sn-3.png"
+              alt="IT blog"
+          /></a>
+          <a class="flex items-center justify-center" href="#"
+            ><img
+              class="max-h-full max-w-full opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              src="/assets/images/orgs/sn-4.png"
+              alt="digitek"
+          /></a>
+          <a class="flex items-center justify-center" href="#"
+            ><img
+              class="max-h-full max-w-full opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              src="/assets/images/orgs/sn-5.png"
+              alt="Utecko"
+          /></a>
+          <a class="flex items-center justify-center" href="#"
+            ><img
+              class="max-h-full max-w-full opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              src="/assets/images/orgs/sn-6.png"
+              alt="teckrown"
+          /></a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

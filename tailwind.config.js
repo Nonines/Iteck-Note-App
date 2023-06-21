@@ -18,6 +18,9 @@ module.exports = {
         "max-height": "max-height",
         spacing: "margin, padding",
       },
+      colors: {
+        grayish: "#f0eff5",
+      },
     },
   },
   plugins: [],

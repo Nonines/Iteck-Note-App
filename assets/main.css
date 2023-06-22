@@ -9,3 +9,7 @@
 .accordion-item button.dr-open::after {
   transform: rotate(-180deg);
 }
+
+.accordion-item button.dr-open {
+  @apply bg-grayish;
+}

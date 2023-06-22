@@ -34,7 +34,7 @@ const accordionController = (() => {
       // to show
       element.classList.toggle("hidden");
       setTimeout(() => {
-        element.style.maxHeight = "100px";
+        element.style.maxHeight = "150px";
       }, 100);
 
       for (let body of accordionContents) {

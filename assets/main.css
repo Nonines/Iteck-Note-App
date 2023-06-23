@@ -13,3 +13,28 @@
 .accordion-item button.dr-open {
   @apply bg-grayish;
 }
+
+.animation-normal {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.animation-normal-slow {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+.animation-slow {
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s;
+}
+
+.animation-slower {
+  -webkit-animation-duration: 5.5s;
+  animation-duration: 5.5s;
+}
+
+.animation-slowest {
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+}

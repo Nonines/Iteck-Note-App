@@ -428,7 +428,7 @@
           <ul class="mb-10 flex flex-col gap-4 text-sm font-bold">
             <li class="flex items-center gap-4">
               <div
-                class="flex h-7 w-7 items-center justify-center rounded-[50%] bg-purple-100"
+                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-100"
               >
                 <img
                   class="max-h-3 max-w-[12px]"
@@ -441,7 +441,7 @@
 
             <li class="flex items-center gap-4">
               <div
-                class="flex h-7 w-7 items-center justify-center rounded-[50%] bg-purple-100"
+                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-100"
               >
                 <img
                   class="max-h-3 max-w-[12px]"
@@ -454,7 +454,7 @@
 
             <li class="flex items-center gap-4">
               <div
-                class="flex h-7 w-7 items-center justify-center rounded-[50%] bg-purple-100"
+                class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-100"
               >
                 <img
                   class="max-h-3 max-w-[12px]"
@@ -703,7 +703,7 @@
 
       <!-- testimonials -->
       <section
-        class="flex flex-col justify-between bg-white px-4 py-10 lg:min-h-[680px] lg:flex-row xl:px-32"
+        class="flex flex-col justify-between bg-white px-4 py-10 lg:flex-row xl:px-32"
       >
         <div class="flex flex-col lg:w-2/5">
           <small
@@ -903,7 +903,218 @@
           </div>
         </div>
       </section>
+
+      <!-- pricing -->
+      <section
+        class="flex flex-col border-t border-grayish bg-white px-4 py-10 xl:px-32"
+      >
+        <div class="flex flex-col items-center">
+          <small
+            class="mb-5 flex h-7 w-max items-center rounded-md bg-grayish px-2 py-1 text-xs text-purple-800"
+            >Pricing Plan</small
+          >
+
+          <h2
+            class="mb-7 text-center text-lg font-extrabold tracking-widest text-black lg:text-4xl"
+          >
+            Start With
+
+            <span
+              class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+              >Affordable Pricing</span
+            >
+          </h2>
+
+          <div class="flex items-center gap-3 text-xs">
+            <p>Billed monthly</p>
+            <label class="relative inline-flex cursor-pointer items-center">
+              <input
+                name="pricing"
+                type="checkbox"
+                value=""
+                class="peer sr-only"
+              />
+              <div
+                class="peer h-6 w-11 rounded-full bg-purple-800 after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-blue-300 after:bg-blue-300 after:transition-all after:content-[''] peer-checked:bg-purple-800 peer-checked:after:translate-x-full peer-checked:after:border-blue-300 peer-focus:outline-none"
+              ></div>
+            </label>
+            <p>Billed annualy</p>
+          </div>
+        </div>
+
+        <!-- plans -->
+        <div
+          class="mt-10 flex flex-col gap-5 rounded-3xl lg:flex-row lg:gap-0 lg:border lg:p-0"
+        >
+          <!-- basic -->
+          <div
+            class="flex flex-col rounded-3xl border p-10 lg:mr-10 lg:w-1/2 lg:border-0 lg:pr-0"
+          >
+            <div>
+              <div
+                class="flex items-center gap-2 text-xs font-extrabold tracking-widest"
+              >
+                <img
+                  class="min-h-[30px]"
+                  src="/assets/images/icons/price_cap.png"
+                  alt="cap"
+                />
+                <h2>BASIC PLAN</h2>
+              </div>
+              <div class="border-b border-gray-300 py-5">
+                <p class="pb-5 text-4xl font-extrabold">
+                  Free <span class="text-sm font-normal"> / month</span>
+                </p>
+                <p class="text-xs text-gray-500">
+                  Free 14 days trial, you can use over 20 basic features
+                </p>
+              </div>
+            </div>
+
+            <div class="py-5">
+              <ul class="flex flex-col gap-4 pb-10 text-sm font-bold">
+                <li class="flex items-center gap-3">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img src="/assets/images/icons/p-file.png" alt="file" />
+                  </div>
+                  <p>Write 5 Notes On Only iOS & Android</p>
+                </li>
+
+                <li class="flex items-center gap-3">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img
+                      src="/assets/images/icons/p-paper-clip.png"
+                      alt="clip"
+                    />
+                  </div>
+                  <p>Add Attachments, Tables, Codes and More To Your Notes</p>
+                </li>
+
+                <li class="flex items-center gap-3 opacity-30">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img src="/assets/images/icons/p-lock.png" alt="lock" />
+                  </div>
+                  <p>Protect Your Notes and Notebooks With Lock</p>
+                </li>
+
+                <li class="flex items-center gap-3 opacity-30">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img src="/assets/images/icons/reload.png" alt="refresh" />
+                  </div>
+                  <p>Focus Mode and Dark Theme</p>
+                </li>
+
+                <li class="flex items-center gap-3 opacity-30">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img src="/assets/images/icons/p-load.png" alt="download" />
+                  </div>
+                  <p>Export to Text, PDF, HTML and Markdown formats</p>
+                </li>
+              </ul>
+
+              <a
+                class="flex h-[50px] w-[200px] items-center justify-center rounded-[30px] border border-purple-800 hover:bg-purple-800 hover:text-white"
+                href=""
+                >Register Now</a
+              >
+            </div>
+          </div>
+
+          <!-- premium -->
+          <div
+            class="flex flex-col rounded-3xl border bg-grayish p-10 lg:w-1/2 lg:rounded-bl-none lg:rounded-tl-none lg:border-0 lg:border-l"
+          >
+            <div>
+              <div
+                class="flex items-center gap-2 text-xs font-extrabold tracking-widest"
+              >
+                <img
+                  class="min-h-[30px]"
+                  src="/assets/images/icons/p_crown.png"
+                  alt="cap"
+                />
+                <h2>PREMIUM PLAN</h2>
+              </div>
+              <div class="border-b border-gray-300 py-5">
+                <p class="pb-5 text-4xl font-extrabold">
+                  &dollar;29 <span class="text-sm font-normal"> / month</span>
+                </p>
+                <p class="text-xs text-gray-500">
+                  Experience all premium features and only one-time payment
+                </p>
+              </div>
+            </div>
+
+            <div class="py-5">
+              <ul class="flex flex-col gap-4 pb-10 text-sm font-bold">
+                <li class="flex items-center gap-3">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img src="/assets/images/icons/p-file.png" alt="file" />
+                  </div>
+                  <p>Write 5 Notes On Only iOS & Android</p>
+                </li>
+
+                <li class="flex items-center gap-3">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img
+                      src="/assets/images/icons/p-paper-clip.png"
+                      alt="clip"
+                    />
+                  </div>
+                  <p>Add Attachments, Tables, Codes and More To Your Notes</p>
+                </li>
+
+                <li class="flex items-center gap-3">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img src="/assets/images/icons/p-lock.png" alt="lock" />
+                  </div>
+                  <p>Protect Your Notes and Notebooks With Lock</p>
+                </li>
+
+                <li class="flex items-center gap-3">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img src="/assets/images/icons/reload.png" alt="refresh" />
+                  </div>
+                  <p>Focus Mode and Dark Theme</p>
+                </li>
+
+                <li class="flex items-center gap-3">
+                  <div
+                    class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-[50%] bg-purple-800"
+                  >
+                    <img src="/assets/images/icons/p-load.png" alt="download" />
+                  </div>
+                  <p>Export to Text, PDF, HTML and Markdown formats</p>
+                </li>
+              </ul>
+
+              <a
+                class="flex h-[50px] w-[200px] items-center justify-center rounded-[30px] border border-purple-800 bg-purple-800 text-white"
+                href=""
+                >Register Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
-<!-- remember to label sections -->

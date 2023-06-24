@@ -16,65 +16,73 @@ const navController = (() => {
 })();
 
 const accordionController = (() => {
-  const accordionBtn1 = document.querySelector(".accordion-btn1");
-  const accordionBody1 = document.querySelector(".accordion-body1");
-  const accordionBtn2 = document.querySelector(".accordion-btn2");
-  const accordionBody2 = document.querySelector(".accordion-body2");
-  const accordionBtn3 = document.querySelector(".accordion-btn3");
-  const accordionBody3 = document.querySelector(".accordion-body3");
-  const accordionContents = document.querySelectorAll(".accordion-body");
-
-  function toggleAccordion(element) {
-    if (element.style.maxHeight) {
-      element.style.maxHeight = null;
+  function toggleAccordion(
+    selectedBody,
+    siblingBodies,
+    selectedButton,
+    siblingButtons
+  ) {
+    // opens/closes accordion by modifying maxheight and display style properties
+    if (selectedBody.style.maxHeight) {
+      selectedBody.style.maxHeight = null;
       setTimeout(() => {
-        element.classList.toggle("hidden");
+        selectedBody.classList.toggle("hidden");
       }, 400);
     } else {
-      // to show
-      element.classList.toggle("hidden");
+      selectedBody.classList.toggle("hidden");
       setTimeout(() => {
-        element.style.maxHeight = "150px";
+        selectedBody.style.maxHeight = "150px";
       }, 100);
+    }
 
-      for (let body of accordionContents) {
-        if (body !== element) {
-          body.style.maxHeight = null;
-          setTimeout(() => {
-            body.classList.add("hidden");
-          }, 400);
-        }
+    // makes sure to close any other open accordion
+    for (let body of siblingBodies) {
+      if (body !== selectedBody) {
+        body.style.maxHeight = null;
+        setTimeout(() => {
+          body.classList.add("hidden");
+        }, 400);
+      }
+    }
+
+    // and removes styling as well
+    for (let button of siblingButtons) {
+      if (selectedButton !== button) {
+        button.classList.remove("text-purple-800");
+        button.classList.remove("dr-open");
+      } else {
+        selectedButton.classList.toggle("text-purple-800");
+        selectedButton.classList.toggle("dr-open");
       }
     }
   }
 
-  accordionBtn1.addEventListener("click", () => {
-    toggleAccordion(accordionBody1);
-    accordionBtn1.classList.toggle("text-purple-800");
-    accordionBtn1.classList.toggle("dr-open");
-    accordionBtn2.classList.toggle("text-purple-800", false);
-    accordionBtn2.classList.toggle("dr-open", false);
-    accordionBtn3.classList.toggle("text-purple-800", false);
-    accordionBtn3.classList.toggle("dr-open", false);
-  });
+  // security section
+  const accordionBodies = document.querySelectorAll(".accordion-body");
+  const accordionButtons = document.querySelectorAll(".accordion-btn");
+  for (let button of accordionButtons) {
+    button.addEventListener("click", () => {
+      toggleAccordion(
+        button.parentElement.nextElementSibling,
+        accordionBodies,
+        button,
+        accordionButtons
+      );
+    });
+  }
 
-  accordionBtn2.addEventListener("click", () => {
-    toggleAccordion(accordionBody2);
-    accordionBtn2.classList.toggle("text-purple-800");
-    accordionBtn2.classList.toggle("dr-open");
-    accordionBtn1.classList.toggle("text-purple-800", false);
-    accordionBtn1.classList.toggle("dr-open", false);
-    accordionBtn3.classList.toggle("text-purple-800", false);
-    accordionBtn3.classList.toggle("dr-open", false);
-  });
+  // faq section
+  const faqAccordionBodies = document.querySelectorAll(".faq-accordion-body");
+  const faqAccordionButtons = document.querySelectorAll(".faq-accordion-btn");
 
-  accordionBtn3.addEventListener("click", () => {
-    toggleAccordion(accordionBody3);
-    accordionBtn3.classList.toggle("text-purple-800");
-    accordionBtn3.classList.toggle("dr-open");
-    accordionBtn1.classList.toggle("text-purple-800", false);
-    accordionBtn1.classList.toggle("dr-open", false);
-    accordionBtn2.classList.toggle("text-purple-800", false);
-    accordionBtn2.classList.toggle("dr-open", false);
-  });
+  for (let button of faqAccordionButtons) {
+    button.addEventListener("click", () => {
+      toggleAccordion(
+        button.parentElement.nextElementSibling,
+        faqAccordionBodies,
+        button,
+        faqAccordionButtons
+      );
+    });
+  }
 })();

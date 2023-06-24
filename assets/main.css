@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.accordion-item button::after {
+:is(.accordion-item, .faq-accordion-item) button::after {
   transition: transform 0.2s ease-in-out;
 }
 
-.accordion-item button.dr-open::after {
+:is(.accordion-item, .faq-accordion-item) button.dr-open::after {
   transform: rotate(-180deg);
 }
 
-.accordion-item button.dr-open {
+:is(.accordion-item, .faq-accordion-item) button.dr-open {
   @apply bg-grayish;
 }
 

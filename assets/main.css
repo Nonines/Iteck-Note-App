@@ -38,3 +38,18 @@
   -webkit-animation-duration: 7s;
   animation-duration: 7s;
 }
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotate(1deg);
+    transform: rotate(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+}
+
+.wave {
+  animation: wave 2s ease-in-out infinite alternate both;
+}

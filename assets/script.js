@@ -13,6 +13,24 @@ const navController = (() => {
       navMenu.style.maxHeight = navMenu.scrollHeight + 500 + "px";
     }
   });
+
+  const navbar = document.querySelector("nav");
+
+  let timer;
+  window.addEventListener("scroll", () => {
+    if (timer) {
+      window.clearTimeout(timer);
+    }
+    timer = window.setTimeout(function () {
+      if (window.scrollY > 68) {
+        navbar.classList.remove("rounded-t-[20px]");
+        navbar.classList.add("bg-white", "shadow-lg");
+      } else {
+        navbar.classList.add("rounded-t-[20px]");
+        navbar.classList.remove("bg-white", "shadow-lg");
+      }
+    }, 100);
+  });
 })();
 
 const accordionController = (() => {
